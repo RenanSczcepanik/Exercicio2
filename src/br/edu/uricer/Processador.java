@@ -11,28 +11,24 @@ public class Processador {
     public Processador(List<Integer> valores) {
         lista = valores;
     }
-
-    int getMinimo() {
+    public int getMinimo() {
         return Collections.min(lista);
     }
-
-    int getMaximo() {
+    public int getMaximo() {
         return Collections.max(lista);
     }
-
-    int calculaSoma() {
+    public int calculaSoma() {
         int soma = 0;
         for (int i : lista) {
             soma += i;
         }
         return soma;
     }
-
-    double getValorMedio() {
+    public double getValorMedio() {
         int soma = calculaSoma();
-        return (double) soma / (double) lista.size();
+        return soma / (double) lista.size();
     }
-    int getTamanho(){
+    public int getTamanho(){
         return lista.size();
     }
 }
